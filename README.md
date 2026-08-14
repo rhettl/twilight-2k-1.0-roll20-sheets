@@ -93,3 +93,8 @@ browser. Edit `main.html` / `equipment.html` / `vehicles.html` /
 `scss/*.scss` and the previews update automatically on save.
 
 One-off builds (no watching): `npm run build:css` and `npm run build:preview`.
+
+## License
+
+[CC BY-SA 4.0](LICENSE) — share and adapt freely, derivatives should stay
+under the same (or an equally open) license.
