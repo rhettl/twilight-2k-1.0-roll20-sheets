@@ -1,0 +1,917 @@
+.t200-sheet {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1b1b18;
+  background: #f4f1e8;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.t200-sheet * {
+  box-sizing: border-box;
+}
+.t200-sheet input[type=text],
+.t200-sheet input[type=number] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #6b6a5e;
+  background: transparent;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  color: #1b1b18;
+  padding: 0.1rem 0.2rem;
+}
+.t200-sheet input[type=text]:focus,
+.t200-sheet input[type=number]:focus {
+  outline: none;
+  border-bottom: 1px solid #4b5320;
+  background: rgba(75, 83, 32, 0.06);
+}
+.t200-sheet input[type=number] {
+  text-align: center;
+}
+.t200-sheet table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sheet-header {
+  border-bottom: 3px double #1b1b18;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+.sheet-header .sheet-title {
+  font-family: "Courier New", monospace;
+  font-size: 1.4rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #33390f;
+  margin: 0 0 0.75rem;
+}
+
+.field {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+.field label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b6a5e;
+  white-space: nowrap;
+}
+
+.header-row {
+  display: grid;
+  gap: 0.4rem 0.5rem;
+}
+
+.sheet-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.stat-list, .combat-derived {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.stat-list .stat-row, .combat-derived .stat-row {
+  display: grid;
+  grid-template-columns: 1fr 4.5rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+.stat-list .stat-row label, .combat-derived .stat-row label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+}
+.stat-list .stat-row input, .combat-derived .stat-row input {
+  text-align: center;
+}
+
+.sheet-panel h2 {
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #4b5320;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #33390f;
+}
+
+.m-1 {
+  margin: 12px;
+}
+
+.m-2 {
+  margin: 24px;
+}
+
+.m-3 {
+  margin: 36px;
+}
+
+.m-4 {
+  margin: 48px;
+}
+
+.m-5 {
+  margin: 60px;
+}
+
+.mt-1 {
+  margin-top: 12px;
+}
+
+.mt-2 {
+  margin-top: 24px;
+}
+
+.mt-3 {
+  margin-top: 36px;
+}
+
+.mt-4 {
+  margin-top: 48px;
+}
+
+.mt-5 {
+  margin-top: 60px;
+}
+
+.mb-1 {
+  margin-bottom: 12px;
+}
+
+.mb-2 {
+  margin-bottom: 24px;
+}
+
+.mb-3 {
+  margin-bottom: 36px;
+}
+
+.mb-4 {
+  margin-bottom: 48px;
+}
+
+.mb-5 {
+  margin-bottom: 60px;
+}
+
+.ml-1 {
+  margin-left: 12px;
+}
+
+.ml-2 {
+  margin-left: 24px;
+}
+
+.ml-3 {
+  margin-left: 36px;
+}
+
+.ml-4 {
+  margin-left: 48px;
+}
+
+.ml-5 {
+  margin-left: 60px;
+}
+
+.mr-1 {
+  margin-right: 12px;
+}
+
+.mr-2 {
+  margin-right: 24px;
+}
+
+.mr-3 {
+  margin-right: 36px;
+}
+
+.mr-4 {
+  margin-right: 48px;
+}
+
+.mr-5 {
+  margin-right: 60px;
+}
+
+.mx-1 {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.mx-2 {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.mx-3 {
+  margin-left: 36px;
+  margin-right: 36px;
+}
+
+.mx-4 {
+  margin-left: 48px;
+  margin-right: 48px;
+}
+
+.mx-5 {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.my-1 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.my-2 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.my-3 {
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+.my-4 {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.my-5 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.p-1 {
+  padding: 12px;
+}
+
+.p-2 {
+  padding: 24px;
+}
+
+.p-3 {
+  padding: 36px;
+}
+
+.p-4 {
+  padding: 48px;
+}
+
+.p-5 {
+  padding: 60px;
+}
+
+.pt-1 {
+  padding-top: 12px;
+}
+
+.pt-2 {
+  padding-top: 24px;
+}
+
+.pt-3 {
+  padding-top: 36px;
+}
+
+.pt-4 {
+  padding-top: 48px;
+}
+
+.pt-5 {
+  padding-top: 60px;
+}
+
+.pb-1 {
+  padding-bottom: 12px;
+}
+
+.pb-2 {
+  padding-bottom: 24px;
+}
+
+.pb-3 {
+  padding-bottom: 36px;
+}
+
+.pb-4 {
+  padding-bottom: 48px;
+}
+
+.pb-5 {
+  padding-bottom: 60px;
+}
+
+.pl-1 {
+  padding-left: 12px;
+}
+
+.pl-2 {
+  padding-left: 24px;
+}
+
+.pl-3 {
+  padding-left: 36px;
+}
+
+.pl-4 {
+  padding-left: 48px;
+}
+
+.pl-5 {
+  padding-left: 60px;
+}
+
+.pr-1 {
+  padding-right: 12px;
+}
+
+.pr-2 {
+  padding-right: 24px;
+}
+
+.pr-3 {
+  padding-right: 36px;
+}
+
+.pr-4 {
+  padding-right: 48px;
+}
+
+.pr-5 {
+  padding-right: 60px;
+}
+
+.px-1 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.px-2 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.px-3 {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.px-4 {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.px-5 {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.py-1 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.py-2 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.py-3 {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.py-4 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.py-5 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.header-row.row-1 {
+  grid-template-columns: 2fr 1fr;
+}
+.header-row.row-2 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.header-row.row-3 {
+  grid-template-columns: 2fr 1fr;
+}
+
+.sheet-body {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.9fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.attributes-table th,
+.attributes-table td {
+  text-align: left;
+  padding: 0.15rem 0.3rem;
+  border-bottom: 1px solid #6b6a5e;
+}
+.attributes-table .attr-abbr {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  width: 2.5rem;
+}
+.attributes-table .attr-name {
+  font-size: 0.85rem;
+}
+.attributes-table .attr-value {
+  width: 3.5rem;
+}
+.attributes-table .attr-value input {
+  text-align: center;
+}
+
+.skills-panel h2 {
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #4b5320;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #33390f;
+}
+
+.skills-table th,
+.skills-table td {
+  padding: 0.1rem 0.2rem;
+  border-bottom: 1px solid #6b6a5e;
+}
+.skills-table th {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b6a5e;
+  text-align: left;
+}
+.skills-table .skill-level {
+  width: 2.5rem;
+}
+.skills-table .skill-level input {
+  text-align: center;
+}
+
+.hitcap-panel h2 {
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #4b5320;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #33390f;
+}
+
+.body-diagram {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: ".    head  ." "larm chest rarm" ".    abd   ." "lleg .     rleg";
+  gap: 0.6rem;
+  justify-items: center;
+}
+
+.hit-loc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.hit-loc label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b6a5e;
+}
+.hit-loc input {
+  width: 3rem;
+  height: 2rem;
+  text-align: center;
+  border: 1px solid #1b1b18;
+  border-radius: 3px;
+  background: rgba(122, 31, 31, 0.03);
+}
+.hit-loc.loc-head {
+  grid-area: head;
+}
+.hit-loc.loc-chest {
+  grid-area: chest;
+}
+.hit-loc.loc-chest input {
+  width: 4rem;
+}
+.hit-loc.loc-larm {
+  grid-area: larm;
+}
+.hit-loc.loc-rarm {
+  grid-area: rarm;
+}
+.hit-loc.loc-abdomen {
+  grid-area: abd;
+}
+.hit-loc.loc-abdomen input {
+  width: 4rem;
+}
+.hit-loc.loc-lleg {
+  grid-area: lleg;
+}
+.hit-loc.loc-rleg {
+  grid-area: rleg;
+}
+
+.tohit-panel h2 {
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #4b5320;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #33390f;
+}
+
+.tohit-table th,
+.tohit-table td {
+  padding: 0.15rem 0.3rem;
+  border: 1px solid #6b6a5e;
+  text-align: center;
+}
+.tohit-table th {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #6b6a5e;
+}
+.tohit-table .tohit-skill {
+  text-align: left;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.tohit-table input {
+  text-align: center;
+  width: 100%;
+}
+
+.combat-derived {
+  margin-top: 0.5rem;
+}
+
+.equipment-panel h2 {
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #4b5320;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #33390f;
+}
+
+.equipment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.equipment-list li {
+  display: flex;
+}
+.equipment-list li input {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .sheet-body {
+    grid-template-columns: 1fr;
+  }
+  .header-row.row-1,
+  .header-row.row-2,
+  .header-row.row-3 {
+    grid-template-columns: 1fr;
+  }
+}
+.gear-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.gear-col {
+  min-width: 0;
+}
+
+.gear-table th,
+.gear-table td {
+  padding: 0.1rem 0.2rem;
+  border-bottom: 1px solid #6b6a5e;
+}
+.gear-table th {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b6a5e;
+  text-align: left;
+}
+.gear-table .gear-wt {
+  width: 3.5rem;
+}
+.gear-table .gear-wt input {
+  text-align: center;
+}
+
+.weapon-table th,
+.weapon-table td {
+  padding: 0.15rem 0.3rem;
+  border: 1px solid #6b6a5e;
+  text-align: center;
+}
+.weapon-table th {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #6b6a5e;
+}
+.weapon-table th[title] {
+  cursor: help;
+}
+.weapon-table td:first-child input {
+  text-align: left;
+}
+.weapon-table input {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .gear-columns {
+    grid-template-columns: 1fr;
+  }
+}
+.veh-body {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.veh-info-table td {
+  padding: 0.15rem 0.3rem;
+  border-bottom: 1px solid #6b6a5e;
+}
+.veh-info-table .veh-info-label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  color: #6b6a5e;
+  white-space: nowrap;
+  width: 40%;
+}
+
+.veh-crew-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+}
+.veh-crew-row .veh-crew-label {
+  font-weight: 700;
+  margin-right: auto;
+}
+.veh-crew-row label {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.veh-crew-row input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.veh-armament-table td {
+  padding: 0.15rem 0.3rem;
+  border-bottom: 1px solid #6b6a5e;
+}
+.veh-armament-table .veh-arm-label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  width: 30%;
+}
+.veh-armament-table .veh-rof-label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  color: #6b6a5e;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 1%;
+  padding-left: 0.5rem;
+}
+.veh-armament-table td:nth-child(4) {
+  width: 3.5rem;
+}
+.veh-armament-table td:nth-child(4) input {
+  text-align: center;
+}
+
+.veh-travel-stats .stat-row {
+  grid-template-columns: auto 1fr;
+}
+.veh-travel-stats .stat-row input {
+  text-align: left;
+}
+
+.veh-combat-speed {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+}
+.veh-combat-speed input {
+  width: 4rem;
+  text-align: center;
+}
+
+.veh-damage-table {
+  border: 1px solid #6b6a5e;
+}
+.veh-damage-table th,
+.veh-damage-table td {
+  padding: 0.25rem 0.4rem;
+  border-bottom: 1px solid #6b6a5e;
+  border-right: 1px solid #6b6a5e;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+}
+.veh-damage-table th:last-child,
+.veh-damage-table td:last-child {
+  border-right: none;
+}
+.veh-damage-table th {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b6a5e;
+  text-align: left;
+  background: rgba(75, 83, 32, 0.06);
+}
+.veh-damage-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.veh-damage-table .veh-dmg-row-label {
+  font-weight: 700;
+  width: 1%;
+  white-space: nowrap;
+  cursor: help;
+}
+.veh-damage-table .veh-dmg-cell {
+  width: 1%;
+  white-space: nowrap;
+}
+.veh-damage-table .veh-dmg-code {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #6b6a5e;
+  text-transform: uppercase;
+  cursor: help;
+}
+.veh-damage-table .veh-dmg-cell input {
+  width: 2.75rem;
+  margin-left: 0.25rem;
+  text-align: center;
+}
+.veh-damage-table .veh-dmg-order-col {
+  width: 30%;
+}
+.veh-damage-table .veh-dmg-order-cell input {
+  width: 100%;
+  text-align: left;
+}
+.veh-damage-table ::placeholder {
+  color: #6b6a5e;
+  opacity: 0.45;
+  font-style: italic;
+}
+
+.veh-component-table th,
+.veh-component-table td {
+  padding: 0.1rem 0.2rem;
+  border-bottom: 1px solid #6b6a5e;
+}
+.veh-component-table th {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b6a5e;
+  text-align: left;
+}
+.veh-component-table td:last-child {
+  width: 4rem;
+}
+.veh-component-table td:last-child input {
+  text-align: center;
+}
+
+.veh-cargo {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid #1b1b18;
+  border-radius: 3px;
+  background: transparent;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.85rem;
+  color: #1b1b18;
+  padding: 0.4rem;
+}
+.veh-cargo:focus {
+  outline: none;
+  border-color: #4b5320;
+  background: rgba(75, 83, 32, 0.06);
+}
+
+@media (max-width: 640px) {
+  .veh-body {
+    grid-template-columns: 1fr;
+  }
+}
+.tab-bar {
+  display: flex;
+  gap: 0.15rem;
+  margin-bottom: 1rem;
+}
+
+.tab-button {
+  appearance: none;
+  border: 1px solid #6b6a5e;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  background: rgba(107, 106, 94, 0.15);
+  color: #6b6a5e;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+}
+.tab-button:hover {
+  background: rgba(75, 83, 32, 0.12);
+  color: #33390f;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tabstoggle[value=character] ~ .tab-bar .tab-button-character,
+.tabstoggle[value=equipment] ~ .tab-bar .tab-button-equipment,
+.tabstoggle[value=vehicle] ~ .tab-bar .tab-button-vehicle {
+  background: #f4f1e8;
+  color: #33390f;
+  border-color: #1b1b18;
+  border-bottom: 1px solid #f4f1e8;
+  margin-bottom: -1px;
+}
+
+.tabstoggle[value=character] ~ .tab-content.tab-character,
+.tabstoggle[value=equipment] ~ .tab-content.tab-equipment,
+.tabstoggle[value=vehicle] ~ .tab-content.tab-vehicle {
+  display: block;
+}
+
+/*# sourceMappingURL=sheet.css.map */

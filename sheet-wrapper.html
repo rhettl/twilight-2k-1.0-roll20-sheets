@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Twilight 200 — Combined Sheet Preview</title>
+  <link rel="stylesheet" href="sheet.css">
+</head>
+<body>
+<!-- SHEET_HTML -->
+<!--
+  Dev-only: Roll20's action buttons only fire inside Roll20 (they dispatch
+  "clicked:X" sheet-worker events with no meaning in a plain browser). This
+  script makes the tab buttons switch tabs locally so the preview is
+  clickable; it is NOT part of sheet.html and never gets uploaded to Roll20.
+  The real switching is the <script type="text/worker"> block in
+  sheet-template.html, which browsers ignore (unrecognized script type).
+-->
+<script>
+  document.querySelectorAll(".tab-button").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var tab = btn.name.replace(/^act_/, "");
+      document.querySelector('input[name="attr_sheetTab"]').setAttribute("value", tab);
+    });
+  });
+</script>
+</body>
+</html>

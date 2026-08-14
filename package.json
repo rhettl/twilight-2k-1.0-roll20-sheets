@@ -1,0 +1,17 @@
+{
+  "name": "Twilight 200",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass scss/main.scss:main.css scss/equipment.scss:equipment.css scss/vehicle.scss:vehicle.css scss/sheet.scss:sheet.css --no-source-map",
+    "watch:css": "sass --watch scss/main.scss:main.css scss/equipment.scss:equipment.css scss/vehicle.scss:vehicle.css scss/sheet.scss:sheet.css",
+    "build:preview": "node build-preview.js",
+    "watch:preview": "node build-preview.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

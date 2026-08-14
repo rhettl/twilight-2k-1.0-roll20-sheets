@@ -1,0 +1,17 @@
+// Shared design tokens — used by main.scss, equipment.scss, vehicle.scss
+
+$color-paper: #f4f1e8;
+$color-ink: #1b1b18;
+$color-rule: #6b6a5e;
+$color-accent: #4b5320; // olive drab
+$color-accent-dark: #33390f;
+$color-danger: #7a1f1f;
+
+$font-body: Georgia, "Times New Roman", serif;
+$font-label: "Helvetica Neue", Arial, sans-serif;
+$font-stencil: "Courier New", monospace;
+
+$border-thin: 1px solid $color-ink;
+$border-rule: 1px solid $color-rule;
+
+$gap: 0.5rem;

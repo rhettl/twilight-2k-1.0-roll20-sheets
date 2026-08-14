@@ -1,0 +1,266 @@
+// Twilight 200 — Main Character Sheet
+// Compiles to /main.css (see package.json build:css/watch:css scripts)
+//
+// Attribute naming: no prefix (attr_str, attr_hp_head, attr_skill1_name, ...).
+// This is the "home" sheet; equipment.scss uses eq_ and vehicle.scss uses
+// veh_ so all three can merge into one Roll20 sheet later without collisions.
+
+@use "variables" as v;
+@use "mixins";
+@use "base";
+@use "utilities";
+
+// ---------------------------------------------------------------------------
+// Header
+// ---------------------------------------------------------------------------
+
+.header-row {
+  &.row-1 {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  &.row-2 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &.row-3 {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Body layout — three columns, like the original form
+// ---------------------------------------------------------------------------
+
+.sheet-body {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.9fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+// ---------------------------------------------------------------------------
+// Attributes
+// ---------------------------------------------------------------------------
+
+.attributes-table {
+  th,
+  td {
+    text-align: left;
+    padding: 0.15rem 0.3rem;
+    border-bottom: v.$border-rule;
+  }
+
+  .attr-abbr {
+    font-family: v.$font-label;
+    font-weight: 700;
+    width: 2.5rem;
+  }
+
+  .attr-name {
+    font-size: 0.85rem;
+  }
+
+  .attr-value {
+    width: 3.5rem;
+
+    input {
+      text-align: center;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Skills
+// ---------------------------------------------------------------------------
+
+.skills-panel {
+  h2 {
+    @include mixins.panel-heading;
+  }
+}
+
+.skills-table {
+  th,
+  td {
+    padding: 0.1rem 0.2rem;
+    border-bottom: v.$border-rule;
+  }
+
+  th {
+    font-family: v.$font-label;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: v.$color-rule;
+    text-align: left;
+  }
+
+  .skill-level {
+    width: 2.5rem;
+
+    input {
+      text-align: center;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Hit Capacity — body diagram
+// ---------------------------------------------------------------------------
+
+.hitcap-panel {
+  h2 {
+    @include mixins.panel-heading;
+  }
+}
+
+.body-diagram {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    ".    head  ."
+    "larm chest rarm"
+    ".    abd   ."
+    "lleg .     rleg";
+  gap: 0.6rem;
+  justify-items: center;
+}
+
+.hit-loc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+
+  label {
+    font-family: v.$font-label;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: v.$color-rule;
+  }
+
+  input {
+    width: 3rem;
+    height: 2rem;
+    text-align: center;
+    border: v.$border-thin;
+    border-radius: 3px;
+    background: rgba(v.$color-danger, 0.03);
+  }
+
+  &.loc-head {
+    grid-area: head;
+  }
+  &.loc-chest {
+    grid-area: chest;
+    input {
+      width: 4rem;
+    }
+  }
+  &.loc-larm {
+    grid-area: larm;
+  }
+  &.loc-rarm {
+    grid-area: rarm;
+  }
+  &.loc-abdomen {
+    grid-area: abd;
+    input {
+      width: 4rem;
+    }
+  }
+  &.loc-lleg {
+    grid-area: lleg;
+  }
+  &.loc-rleg {
+    grid-area: rleg;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Base Numbers to Hit
+// ---------------------------------------------------------------------------
+
+.tohit-panel {
+  h2 {
+    @include mixins.panel-heading;
+  }
+}
+
+.tohit-table {
+  th,
+  td {
+    padding: 0.15rem 0.3rem;
+    border: v.$border-rule;
+    text-align: center;
+  }
+
+  th {
+    font-family: v.$font-label;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: v.$color-rule;
+  }
+
+  .tohit-skill {
+    text-align: left;
+    font-family: v.$font-label;
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+
+  input {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.combat-derived {
+  @extend .stat-list;
+  margin-top: 0.5rem;
+}
+
+// ---------------------------------------------------------------------------
+// Equipment (short list on the character sheet itself)
+// ---------------------------------------------------------------------------
+
+.equipment-panel {
+  h2 {
+    @include mixins.panel-heading;
+  }
+}
+
+.equipment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  li {
+    display: flex;
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Responsive fallback — stack columns on narrow viewports
+// ---------------------------------------------------------------------------
+
+@media (max-width: 640px) {
+  .sheet-body {
+    grid-template-columns: 1fr;
+  }
+
+  .header-row.row-1,
+  .header-row.row-2,
+  .header-row.row-3 {
+    grid-template-columns: 1fr;
+  }
+}

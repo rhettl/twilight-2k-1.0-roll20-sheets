@@ -1,0 +1,30 @@
+@use "variables" as v;
+
+@mixin panel-heading {
+  margin: 0 0 v.$gap;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid v.$color-accent;
+  font-family: v.$font-label;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: v.$color-accent-dark;
+}
+
+@mixin field-input {
+  width: 100%;
+  border: none;
+  border-bottom: v.$border-rule;
+  background: transparent;
+  font-family: v.$font-body;
+  font-size: 0.9rem;
+  color: v.$color-ink;
+  padding: 0.1rem 0.2rem;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid v.$color-accent;
+    background: rgba(v.$color-accent, 0.06);
+  }
+}

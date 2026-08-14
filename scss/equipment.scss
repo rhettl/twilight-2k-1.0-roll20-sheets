@@ -1,0 +1,94 @@
+// Twilight 200 — Equipment Sheet
+// Compiles to /equipment.css (see package.json build:css/watch:css scripts)
+//
+// Attribute naming: eq_ prefix (attr_eq_col1_1_name, attr_eq_wpn1_dam, ...)
+// keeps this sheet's fields collision-free with main.scss (no prefix) and
+// vehicle.scss (veh_) so all three can merge into one Roll20 sheet later.
+
+@use "variables" as v;
+@use "mixins";
+@use "base";
+@use "utilities";
+
+// ---------------------------------------------------------------------------
+// Equipment columns
+// ---------------------------------------------------------------------------
+
+.gear-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.gear-col {
+  min-width: 0;
+}
+
+.gear-table {
+  th,
+  td {
+    padding: 0.1rem 0.2rem;
+    border-bottom: v.$border-rule;
+  }
+
+  th {
+    font-family: v.$font-label;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: v.$color-rule;
+    text-align: left;
+  }
+
+  .gear-wt {
+    width: 3.5rem;
+
+    input {
+      text-align: center;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Weapon Statistics
+// ---------------------------------------------------------------------------
+
+.weapon-table {
+  th,
+  td {
+    padding: 0.15rem 0.3rem;
+    border: v.$border-rule;
+    text-align: center;
+  }
+
+  th {
+    font-family: v.$font-label;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: v.$color-rule;
+
+    &[title] {
+      cursor: help;
+    }
+  }
+
+  td:first-child input {
+    text-align: left;
+  }
+
+  input {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Responsive fallback
+// ---------------------------------------------------------------------------
+
+@media (max-width: 640px) {
+  .gear-columns {
+    grid-template-columns: 1fr;
+  }
+}

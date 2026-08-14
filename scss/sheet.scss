@@ -1,0 +1,13 @@
+// Twilight 200 — Combined Sheet (Character / Equipment / Vehicle tabs)
+// Compiles to /sheet.css (see package.json build:css/watch:css scripts)
+//
+// This is the file that ships to Roll20. It pulls in each tab's styles
+// as-is (main/equipment/vehicle scss are still edited independently) plus
+// the tab bar/visibility rules. Sass's module system evaluates each shared
+// partial (variables/mixins/base/utilities) exactly once even though all
+// three tab stylesheets @use them, so nothing is duplicated in the output.
+
+@use "main";
+@use "equipment";
+@use "vehicle";
+@use "tabs";

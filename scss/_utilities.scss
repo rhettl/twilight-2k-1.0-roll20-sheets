@@ -1,0 +1,46 @@
+// Spacing utility classes — margin & padding
+// Naming: [mp][t|b|l|r|x|y]?-[1-5]  e.g. m-1, mt-3, px-5, py-2
+
+@use "sass:list";
+
+$spacer: 12px;
+
+$t200-spacers: (
+  1: $spacer * 1,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+);
+
+$t200-props: (
+  "m": margin,
+  "p": padding,
+);
+
+// side-abbr => list of CSS side names ("" means all sides / the bare property)
+$t200-sides: (
+  "": (),
+  "t": ("top"),
+  "b": ("bottom"),
+  "l": ("left"),
+  "r": ("right"),
+  "x": ("left", "right"),
+  "y": ("top", "bottom"),
+);
+
+@each $prop-abbr, $prop in $t200-props {
+  @each $side-abbr, $sides in $t200-sides {
+    @each $size, $value in $t200-spacers {
+      .#{$prop-abbr}#{$side-abbr}-#{$size} {
+        @if list.length($sides) == 0 {
+          #{$prop}: $value;
+        } @else {
+          @each $side in $sides {
+            #{$prop}-#{$side}: $value;
+          }
+        }
+      }
+    }
+  }
+}

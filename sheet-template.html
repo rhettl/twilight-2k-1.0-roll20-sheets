@@ -1,0 +1,32 @@
+<div class="t200-sheet">
+
+  <input type="hidden" class="tabstoggle" name="attr_sheetTab" value="character">
+
+  <nav class="tab-bar">
+    <button type="action" name="act_character" class="tab-button tab-button-character">Character Sheet</button>
+    <button type="action" name="act_equipment" class="tab-button tab-button-equipment">Equipment</button>
+    <button type="action" name="act_vehicle" class="tab-button tab-button-vehicle">Vehicle</button>
+  </nav>
+
+  <div class="tab-content tab-character">
+<!-- MAIN_HTML -->
+  </div>
+
+  <div class="tab-content tab-equipment">
+<!-- EQUIPMENT_HTML -->
+  </div>
+
+  <div class="tab-content tab-vehicle">
+<!-- VEHICLE_HTML -->
+  </div>
+
+</div>
+
+<script type="text/worker">
+  const t200Tabs = ["character", "equipment", "vehicle"];
+  t200Tabs.forEach(function (tab) {
+    on("clicked:act_" + tab, function () {
+      setAttrs({ sheetTab: tab });
+    });
+  });
+</script>

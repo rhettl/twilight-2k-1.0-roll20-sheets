@@ -1,0 +1,262 @@
+// Twilight 200 — Vehicle Record Sheet
+// Compiles to /vehicle.css (see package.json build:css/watch:css scripts)
+//
+// Attribute naming: veh_ prefix (attr_veh_type, attr_veh_dmg_r_lh, ...)
+// keeps this sheet's fields collision-free with main.scss (no prefix) and
+// equipment.scss (eq_) so all three can merge into one Roll20 sheet later.
+
+@use "variables" as v;
+@use "mixins";
+@use "base";
+@use "utilities";
+
+// ---------------------------------------------------------------------------
+// Body layout — two columns
+// ---------------------------------------------------------------------------
+
+.veh-body {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+// ---------------------------------------------------------------------------
+// Vehicle info block
+// ---------------------------------------------------------------------------
+
+.veh-info-table {
+  td {
+    padding: 0.15rem 0.3rem;
+    border-bottom: v.$border-rule;
+  }
+
+  .veh-info-label {
+    font-family: v.$font-label;
+    font-size: 0.75rem;
+    color: v.$color-rule;
+    white-space: nowrap;
+    width: 40%;
+  }
+}
+
+.veh-crew-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-family: v.$font-label;
+  font-size: 0.8rem;
+
+  .veh-crew-label {
+    font-weight: 700;
+    margin-right: auto;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Armament
+// ---------------------------------------------------------------------------
+
+.veh-armament-table {
+  td {
+    padding: 0.15rem 0.3rem;
+    border-bottom: v.$border-rule;
+  }
+
+  .veh-arm-label {
+    font-family: v.$font-label;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    width: 30%;
+  }
+
+  .veh-rof-label {
+    font-family: v.$font-label;
+    font-size: 0.7rem;
+    color: v.$color-rule;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 1%;
+    padding-left: 0.5rem;
+  }
+
+  td:nth-child(4) {
+    width: 3.5rem;
+
+    input {
+      text-align: center;
+    }
+  }
+}
+
+// Let Travel's text answers (fuel types, capacities) grow instead of being
+// squeezed into the shared stat-row's default 4.5rem input column.
+.veh-travel-stats .stat-row {
+  grid-template-columns: auto 1fr;
+
+  input {
+    text-align: left;
+  }
+}
+
+.veh-combat-speed {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: v.$font-label;
+  font-size: 0.8rem;
+
+  input {
+    width: 4rem;
+    text-align: center;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Vehicle Damage Location
+// ---------------------------------------------------------------------------
+
+.veh-damage-table {
+  border: v.$border-rule;
+
+  th,
+  td {
+    padding: 0.25rem 0.4rem;
+    border-bottom: v.$border-rule;
+    border-right: v.$border-rule;
+    font-family: v.$font-label;
+    font-size: 0.75rem;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  th {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: v.$color-rule;
+    text-align: left;
+    background: rgba(v.$color-accent, 0.06);
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .veh-dmg-row-label {
+    font-weight: 700;
+    width: 1%;
+    white-space: nowrap;
+    cursor: help;
+  }
+
+  .veh-dmg-cell {
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  .veh-dmg-code {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: v.$color-rule;
+    text-transform: uppercase;
+    cursor: help;
+  }
+
+  .veh-dmg-cell input {
+    width: 2.75rem;
+    margin-left: 0.25rem;
+    text-align: center;
+  }
+
+  .veh-dmg-order-col {
+    width: 30%;
+  }
+
+  .veh-dmg-order-cell input {
+    width: 100%;
+    text-align: left;
+  }
+
+  ::placeholder {
+    color: v.$color-rule;
+    opacity: 0.45;
+    font-style: italic;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Component Damage
+// ---------------------------------------------------------------------------
+
+.veh-component-table {
+  th,
+  td {
+    padding: 0.1rem 0.2rem;
+    border-bottom: v.$border-rule;
+  }
+
+  th {
+    font-family: v.$font-label;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: v.$color-rule;
+    text-align: left;
+  }
+
+  td:last-child {
+    width: 4rem;
+
+    input {
+      text-align: center;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Cargo
+// ---------------------------------------------------------------------------
+
+.veh-cargo {
+  width: 100%;
+  resize: vertical;
+  border: v.$border-thin;
+  border-radius: 3px;
+  background: transparent;
+  font-family: v.$font-body;
+  font-size: 0.85rem;
+  color: v.$color-ink;
+  padding: 0.4rem;
+
+  &:focus {
+    outline: none;
+    border-color: v.$color-accent;
+    background: rgba(v.$color-accent, 0.06);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Responsive fallback
+// ---------------------------------------------------------------------------
+
+@media (max-width: 640px) {
+  .veh-body {
+    grid-template-columns: 1fr;
+  }
+}

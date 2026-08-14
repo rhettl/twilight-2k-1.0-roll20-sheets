@@ -1,0 +1,108 @@
+// Shared page chrome — root wrapper, header bar, and generic field/list
+// components reused across main.scss, equipment.scss, and vehicle.scss.
+
+@use "variables" as v;
+@use "mixins";
+
+.t200-sheet {
+  font-family: v.$font-body;
+  color: v.$color-ink;
+  background: v.$color-paper;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    @include mixins.field-input;
+  }
+
+  input[type="number"] {
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+}
+
+.sheet-header {
+  border-bottom: 3px double v.$color-ink;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+
+  .sheet-title {
+    font-family: v.$font-stencil;
+    font-size: 1.4rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: v.$color-accent-dark;
+    margin: 0 0 0.75rem;
+  }
+}
+
+// Generic label:input key-value pair, e.g. header fields, vehicle info
+.field {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+
+  label {
+    font-family: v.$font-label;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: v.$color-rule;
+    white-space: nowrap;
+  }
+}
+
+// Generic grid row of .field elements
+.header-row {
+  display: grid;
+  gap: 0.4rem v.$gap;
+}
+
+// Generic flex column used inside a sheet's multi-column body layout
+.sheet-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+// Generic vertical list of label+input rows (Coolness, RF, Fuel Capacity, etc.)
+.stat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 4.5rem;
+    align-items: center;
+    gap: 0.5rem;
+
+    label {
+      font-family: v.$font-label;
+      font-size: 0.8rem;
+    }
+
+    input {
+      text-align: center;
+    }
+  }
+}
+
+// Generic panel heading — apply panel-heading styling via a shared class
+// instead of repeating the mixin per bespoke panel selector.
+.sheet-panel {
+  h2 {
+    @include mixins.panel-heading;
+  }
+}
