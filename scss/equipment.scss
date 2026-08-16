@@ -14,18 +14,18 @@
 // Equipment columns
 // ---------------------------------------------------------------------------
 
-.gear-columns {
+.sheet-gear-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0 1.25rem;
   margin-bottom: 1.5rem;
 }
 
-.gear-col {
+.sheet-gear-col {
   min-width: 0;
 }
 
-.gear-table {
+.sheet-gear-table {
   th,
   td {
     padding: 0.1rem 0.2rem;
@@ -41,7 +41,7 @@
     text-align: left;
   }
 
-  .gear-wt {
+  .sheet-gear-wt {
     width: 3.5rem;
 
     input {
@@ -54,7 +54,7 @@
 // Weapon Statistics
 // ---------------------------------------------------------------------------
 
-.weapon-table {
+.sheet-weapon-table {
   th,
   td {
     padding: 0.15rem 0.3rem;
@@ -88,7 +88,7 @@
 // ---------------------------------------------------------------------------
 
 @media (max-width: 640px) {
-  .gear-columns {
+  .sheet-gear-columns {
     grid-template-columns: 1fr;
   }
 }

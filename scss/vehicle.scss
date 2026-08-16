@@ -14,7 +14,7 @@
 // Body layout — two columns
 // ---------------------------------------------------------------------------
 
-.veh-body {
+.sheet-veh-body {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 1.25rem;
@@ -25,13 +25,13 @@
 // Vehicle info block
 // ---------------------------------------------------------------------------
 
-.veh-info-table {
+.sheet-veh-info-table {
   td {
     padding: 0.15rem 0.3rem;
     border-bottom: v.$border-rule;
   }
 
-  .veh-info-label {
+  .sheet-veh-info-label {
     font-family: v.$font-label;
     font-size: 0.75rem;
     color: v.$color-rule;
@@ -40,7 +40,7 @@
   }
 }
 
-.veh-crew-row {
+.sheet-veh-crew-row {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -48,7 +48,7 @@
   font-family: v.$font-label;
   font-size: 0.8rem;
 
-  .veh-crew-label {
+  .sheet-veh-crew-label {
     font-weight: 700;
     margin-right: auto;
   }
@@ -69,20 +69,20 @@
 // Armament
 // ---------------------------------------------------------------------------
 
-.veh-armament-table {
+.sheet-veh-armament-table {
   td {
     padding: 0.15rem 0.3rem;
     border-bottom: v.$border-rule;
   }
 
-  .veh-arm-label {
+  .sheet-veh-arm-label {
     font-family: v.$font-label;
     font-size: 0.75rem;
     white-space: nowrap;
     width: 30%;
   }
 
-  .veh-rof-label {
+  .sheet-veh-rof-label {
     font-family: v.$font-label;
     font-size: 0.7rem;
     color: v.$color-rule;
@@ -103,7 +103,7 @@
 
 // Let Travel's text answers (fuel types, capacities) grow instead of being
 // squeezed into the shared stat-row's default 4.5rem input column.
-.veh-travel-stats .stat-row {
+.sheet-veh-travel-stats .sheet-stat-row {
   grid-template-columns: auto 1fr;
 
   input {
@@ -111,7 +111,7 @@
   }
 }
 
-.veh-combat-speed {
+.sheet-veh-combat-speed {
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -128,7 +128,7 @@
 // Vehicle Damage Location
 // ---------------------------------------------------------------------------
 
-.veh-damage-table {
+.sheet-veh-damage-table {
   border: v.$border-rule;
 
   th,
@@ -157,19 +157,19 @@
     border-bottom: none;
   }
 
-  .veh-dmg-row-label {
+  .sheet-veh-dmg-row-label {
     font-weight: 700;
     width: 1%;
     white-space: nowrap;
     cursor: help;
   }
 
-  .veh-dmg-cell {
+  .sheet-veh-dmg-cell {
     width: 1%;
     white-space: nowrap;
   }
 
-  .veh-dmg-code {
+  .sheet-veh-dmg-code {
     display: inline-block;
     font-size: 0.65rem;
     font-weight: 700;
@@ -178,17 +178,17 @@
     cursor: help;
   }
 
-  .veh-dmg-cell input {
+  .sheet-veh-dmg-cell input {
     width: 2.75rem;
     margin-left: 0.25rem;
     text-align: center;
   }
 
-  .veh-dmg-order-col {
+  .sheet-veh-dmg-order-col {
     width: 30%;
   }
 
-  .veh-dmg-order-cell input {
+  .sheet-veh-dmg-order-cell input {
     width: 100%;
     text-align: left;
   }
@@ -204,7 +204,7 @@
 // Component Damage
 // ---------------------------------------------------------------------------
 
-.veh-component-table {
+.sheet-veh-component-table {
   th,
   td {
     padding: 0.1rem 0.2rem;
@@ -233,7 +233,7 @@
 // Cargo
 // ---------------------------------------------------------------------------
 
-.veh-cargo {
+.sheet-veh-cargo {
   width: 100%;
   resize: vertical;
   border: v.$border-thin;
@@ -256,7 +256,7 @@
 // ---------------------------------------------------------------------------
 
 @media (max-width: 640px) {
-  .veh-body {
+  .sheet-veh-body {
     grid-template-columns: 1fr;
   }
 }

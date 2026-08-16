@@ -32,7 +32,7 @@ $t200-sides: (
 @each $prop-abbr, $prop in $t200-props {
   @each $side-abbr, $sides in $t200-sides {
     @each $size, $value in $t200-spacers {
-      .#{$prop-abbr}#{$side-abbr}-#{$size} {
+      .sheet-#{$prop-abbr}#{$side-abbr}-#{$size} {
         @if list.length($sides) == 0 {
           #{$prop}: $value;
         } @else {

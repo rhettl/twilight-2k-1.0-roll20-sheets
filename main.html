@@ -2,38 +2,38 @@
   <div class="sheet-header">
     <h1 class="sheet-title">Character Record Sheet</h1>
 
-    <div class="header-row row-1">
-      <div class="field field-name">
+    <div class="sheet-header-row sheet-row-1">
+      <div class="sheet-field sheet-field-name">
         <label for="character_name">Character's Name</label>
         <input type="text" name="attr_character_name" id="character_name">
       </div>
-      <div class="field field-age">
+      <div class="sheet-field sheet-field-age">
         <label for="age">Age</label>
         <input type="number" name="attr_age" id="age">
       </div>
     </div>
 
-    <div class="header-row row-2">
-      <div class="field field-rank">
+    <div class="sheet-header-row sheet-row-2">
+      <div class="sheet-field sheet-field-rank">
         <label for="rank">Rank</label>
         <input type="text" name="attr_rank" id="rank">
       </div>
-      <div class="field field-branch">
+      <div class="sheet-field sheet-field-branch">
         <label for="branch">Branch</label>
         <input type="text" name="attr_branch" id="branch">
       </div>
-      <div class="field field-specialty">
+      <div class="sheet-field sheet-field-specialty">
         <label for="specialty">Specialty</label>
         <input type="text" name="attr_specialty" id="specialty">
       </div>
     </div>
 
-    <div class="header-row row-3">
-      <div class="field field-nationality">
+    <div class="sheet-header-row sheet-row-3">
+      <div class="sheet-field sheet-field-nationality">
         <label for="nationality">Nationality</label>
         <input type="text" name="attr_nationality" id="nationality">
       </div>
-      <div class="field field-weight">
+      <div class="sheet-field sheet-field-weight">
         <label for="weight">Weight</label>
         <input type="text" name="attr_weight" id="weight">
       </div>
@@ -43,85 +43,85 @@
   <div class="sheet-body">
 
     <!-- ================= COLUMN 1: Attributes, Skills, To-Hit ================= -->
-    <section class="sheet-col col-attributes">
+    <section class="sheet-col sheet-col-attributes">
 
-      <div class="attributes-panel mb-1">
+      <div class="sheet-attributes-panel sheet-mb-1">
         <h2>Basic Attributes</h2>
-        <table class="attributes-table">
+        <table class="sheet-attributes-table">
           <tbody>
             <tr>
-              <td class="attr-abbr">STR</td>
-              <td class="attr-name">Strength</td>
-              <td class="attr-value"><input type="number" name="attr_str"></td>
+              <td class="sheet-attr-abbr">STR</td>
+              <td class="sheet-attr-name">Strength</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_str"></td>
             </tr>
             <tr>
-              <td class="attr-abbr">AGL</td>
-              <td class="attr-name">Agility</td>
-              <td class="attr-value"><input type="number" name="attr_agl"></td>
+              <td class="sheet-attr-abbr">AGL</td>
+              <td class="sheet-attr-name">Agility</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_agl"></td>
             </tr>
             <tr>
-              <td class="attr-abbr">CON</td>
-              <td class="attr-name">Constitution</td>
-              <td class="attr-value"><input type="number" name="attr_con"></td>
+              <td class="sheet-attr-abbr">CON</td>
+              <td class="sheet-attr-name">Constitution</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_con"></td>
             </tr>
             <tr>
-              <td class="attr-abbr">STA</td>
-              <td class="attr-name">Stature</td>
-              <td class="attr-value"><input type="number" name="attr_sta"></td>
+              <td class="sheet-attr-abbr">STA</td>
+              <td class="sheet-attr-name">Stature</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_sta"></td>
             </tr>
             <tr>
-              <td class="attr-abbr">INT</td>
-              <td class="attr-name">Intelligence</td>
-              <td class="attr-value"><input type="number" name="attr_int"></td>
+              <td class="sheet-attr-abbr">INT</td>
+              <td class="sheet-attr-name">Intelligence</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_int"></td>
             </tr>
             <tr>
-              <td class="attr-abbr">EDU</td>
-              <td class="attr-name">Education</td>
-              <td class="attr-value"><input type="number" name="attr_edu"></td>
+              <td class="sheet-attr-abbr">EDU</td>
+              <td class="sheet-attr-name">Education</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_edu"></td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div class="stat-list mb-2">
-        <div class="stat-row">
+      <div class="sheet-stat-list sheet-mb-2">
+        <div class="sheet-stat-row">
           <label for="coolness">Coolness Under Fire</label>
           <input type="number" name="attr_coolness" id="coolness">
         </div>
-        <div class="stat-row">
+        <div class="sheet-stat-row">
           <label for="rads">RADs</label>
           <input type="number" name="attr_rads" id="rads">
         </div>
-        <div class="stat-row">
+        <div class="sheet-stat-row">
           <label for="load">Load</label>
           <input type="text" name="attr_load" id="load">
         </div>
-        <div class="stat-row">
+        <div class="sheet-stat-row">
           <label for="throw_range">Throw Range</label>
           <input type="text" name="attr_throw_range" id="throw_range">
         </div>
       </div>
 
-      <div class="skills-panel">
+      <div class="sheet-skills-panel">
         <h2>Skills</h2>
-        <table class="skills-table">
+        <table class="sheet-skills-table">
           <thead>
             <tr>
-              <th class="skill-level">Level</th>
-              <th class="skill-name">Skill</th>
+              <th class="sheet-skill-level">Level</th>
+              <th class="sheet-skill-name">Skill</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td class="skill-level"><input type="number" name="attr_skill1_level"></td><td><input type="text" name="attr_skill1_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill2_level"></td><td><input type="text" name="attr_skill2_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill3_level"></td><td><input type="text" name="attr_skill3_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill4_level"></td><td><input type="text" name="attr_skill4_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill5_level"></td><td><input type="text" name="attr_skill5_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill6_level"></td><td><input type="text" name="attr_skill6_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill7_level"></td><td><input type="text" name="attr_skill7_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill8_level"></td><td><input type="text" name="attr_skill8_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill9_level"></td><td><input type="text" name="attr_skill9_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill10_level"></td><td><input type="text" name="attr_skill10_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill1_level"></td><td><input type="text" name="attr_skill1_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill2_level"></td><td><input type="text" name="attr_skill2_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill3_level"></td><td><input type="text" name="attr_skill3_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill4_level"></td><td><input type="text" name="attr_skill4_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill5_level"></td><td><input type="text" name="attr_skill5_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill6_level"></td><td><input type="text" name="attr_skill6_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill7_level"></td><td><input type="text" name="attr_skill7_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill8_level"></td><td><input type="text" name="attr_skill8_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill9_level"></td><td><input type="text" name="attr_skill9_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill10_level"></td><td><input type="text" name="attr_skill10_name"></td></tr>
           </tbody>
         </table>
       </div>
@@ -129,72 +129,72 @@
     </section>
 
     <!-- ================= COLUMN 2: Hit Capacity ================= -->
-    <section class="sheet-col col-hitcap">
-      <div class="hitcap-panel">
+    <section class="sheet-col sheet-col-hitcap">
+      <div class="sheet-hitcap-panel">
         <h2>Hit Capacity</h2>
-        <div class="body-diagram mb-3">
-          <div class="hit-loc loc-head">
+        <div class="sheet-body-diagram sheet-mb-3">
+          <div class="sheet-hit-loc sheet-loc-head">
             <label for="hp_head">Head</label>
             <input type="number" name="attr_hp_head" id="hp_head">
           </div>
-          <div class="hit-loc loc-larm">
+          <div class="sheet-hit-loc sheet-loc-larm">
             <label for="hp_larm">L. Arm</label>
             <input type="number" name="attr_hp_larm" id="hp_larm">
           </div>
-          <div class="hit-loc loc-chest">
+          <div class="sheet-hit-loc sheet-loc-chest">
             <label for="hp_chest">Chest</label>
             <input type="number" name="attr_hp_chest" id="hp_chest">
           </div>
-          <div class="hit-loc loc-rarm">
+          <div class="sheet-hit-loc sheet-loc-rarm">
             <label for="hp_rarm">R. Arm</label>
             <input type="number" name="attr_hp_rarm" id="hp_rarm">
           </div>
-          <div class="hit-loc loc-abdomen">
+          <div class="sheet-hit-loc sheet-loc-abdomen">
             <label for="hp_abdomen">Abdomen</label>
             <input type="number" name="attr_hp_abdomen" id="hp_abdomen">
           </div>
-          <div class="hit-loc loc-lleg">
+          <div class="sheet-hit-loc sheet-loc-lleg">
             <label for="hp_lleg">L. Leg</label>
             <input type="number" name="attr_hp_lleg" id="hp_lleg">
           </div>
-          <div class="hit-loc loc-rleg">
+          <div class="sheet-hit-loc sheet-loc-rleg">
             <label for="hp_rleg">R. Leg</label>
             <input type="number" name="attr_hp_rleg" id="hp_rleg">
           </div>
         </div>
 
-        <div class="stat-list mb-3">
-          <div class="stat-row">
+        <div class="sheet-stat-list sheet-mb-3">
+          <div class="sheet-stat-row">
             <label for="money">Money</label>
             <input type="text" name="attr_money" id="money">
           </div>
-          <div class="stat-row">
+          <div class="sheet-stat-row">
             <label for="karma">Karma Points</label>
             <input type="number" name="attr_karma" id="karma">
           </div>
         </div>
       </div>
 
-      <div class="skills-panel">
+      <div class="sheet-skills-panel">
         <h2>Skills</h2>
-        <table class="skills-table">
+        <table class="sheet-skills-table">
           <thead>
             <tr>
-              <th class="skill-level">Level</th>
-              <th class="skill-name">Skill</th>
+              <th class="sheet-skill-level">Level</th>
+              <th class="sheet-skill-name">Skill</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td class="skill-level"><input type="number" name="attr_skill11_level"></td><td><input type="text" name="attr_skill11_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill12_level"></td><td><input type="text" name="attr_skill12_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill13_level"></td><td><input type="text" name="attr_skill13_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill14_level"></td><td><input type="text" name="attr_skill14_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill15_level"></td><td><input type="text" name="attr_skill15_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill16_level"></td><td><input type="text" name="attr_skill16_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill17_level"></td><td><input type="text" name="attr_skill17_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill18_level"></td><td><input type="text" name="attr_skill18_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill19_level"></td><td><input type="text" name="attr_skill19_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill20_level"></td><td><input type="text" name="attr_skill20_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill11_level"></td><td><input type="text" name="attr_skill11_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill12_level"></td><td><input type="text" name="attr_skill12_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill13_level"></td><td><input type="text" name="attr_skill13_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill14_level"></td><td><input type="text" name="attr_skill14_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill15_level"></td><td><input type="text" name="attr_skill15_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill16_level"></td><td><input type="text" name="attr_skill16_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill17_level"></td><td><input type="text" name="attr_skill17_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill18_level"></td><td><input type="text" name="attr_skill18_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill19_level"></td><td><input type="text" name="attr_skill19_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill20_level"></td><td><input type="text" name="attr_skill20_name"></td></tr>
           </tbody>
         </table>
       </div>
@@ -202,10 +202,10 @@
     </section>
 
     <!-- ================= COLUMN 3: Equipment ================= -->
-    <section class="sheet-col col-equipment">
-      <div class="equipment-panel mb-2">
+    <section class="sheet-col sheet-col-equipment">
+      <div class="sheet-equipment-panel sheet-mb-2">
         <h2>Equipment</h2>
-        <ul class="equipment-list">
+        <ul class="sheet-equipment-list">
           <li><input type="text" name="attr_equipment1"></li>
           <li><input type="text" name="attr_equipment2"></li>
           <li><input type="text" name="attr_equipment3"></li>
@@ -229,12 +229,12 @@
         </ul>
       </div>
 
-      <div class="tohit-panel">
+      <div class="sheet-tohit-panel">
         <h2>Base Numbers to Hit</h2>
-        <table class="tohit-table">
+        <table class="sheet-tohit-table">
           <thead>
             <tr>
-              <th class="tohit-skill">Skill</th>
+              <th class="sheet-tohit-skill">Skill</th>
               <th>S</th>
               <th>M</th>
               <th>L</th>
@@ -242,31 +242,31 @@
           </thead>
           <tbody>
             <tr>
-              <td class="tohit-skill">CRM</td>
+              <td class="sheet-tohit-skill">CRM</td>
               <td><input type="number" name="attr_tohit_crm_s"></td>
               <td><input type="number" name="attr_tohit_crm_m"></td>
               <td><input type="number" name="attr_tohit_crm_l"></td>
             </tr>
             <tr>
-              <td class="tohit-skill">PST</td>
+              <td class="sheet-tohit-skill">PST</td>
               <td><input type="number" name="attr_tohit_pst_s"></td>
               <td><input type="number" name="attr_tohit_pst_m"></td>
               <td><input type="number" name="attr_tohit_pst_l"></td>
             </tr>
             <tr>
-              <td class="tohit-skill">HW</td>
+              <td class="sheet-tohit-skill">HW</td>
               <td><input type="number" name="attr_tohit_hw_s"></td>
               <td><input type="number" name="attr_tohit_hw_m"></td>
               <td><input type="number" name="attr_tohit_hw_l"></td>
             </tr>
             <tr>
-              <td class="tohit-skill">LCG</td>
+              <td class="sheet-tohit-skill">LCG</td>
               <td><input type="number" name="attr_tohit_lcg_s"></td>
               <td><input type="number" name="attr_tohit_lcg_m"></td>
               <td><input type="number" name="attr_tohit_lcg_l"></td>
             </tr>
             <tr>
-              <td class="tohit-skill">HB</td>
+              <td class="sheet-tohit-skill">HB</td>
               <td><input type="number" name="attr_tohit_hb_s"></td>
               <td><input type="number" name="attr_tohit_hb_m"></td>
               <td><input type="number" name="attr_tohit_hb_l"></td>
@@ -274,16 +274,16 @@
           </tbody>
         </table>
 
-        <div class="combat-derived">
-          <div class="stat-row">
+        <div class="sheet-combat-derived">
+          <div class="sheet-stat-row">
             <label for="body_combat_damage">Body Combat Damage</label>
             <input type="text" name="attr_body_combat_damage" id="body_combat_damage">
           </div>
-          <div class="stat-row">
+          <div class="sheet-stat-row">
             <label for="mil_exp_base">Military Experience Base</label>
             <input type="text" name="attr_mil_exp_base" id="mil_exp_base">
           </div>
-          <div class="stat-row">
+          <div class="sheet-stat-row">
             <label for="months_in_combat">Months In Combat</label>
             <input type="number" name="attr_months_in_combat" id="months_in_combat">
           </div>

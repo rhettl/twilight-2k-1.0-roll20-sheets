@@ -1,19 +1,19 @@
 // Tab bar + tab-content visibility for the combined sheet.
 // Pure CSS attribute-selector pattern (documented Roll20 technique): a
 // hidden input tracks the active tab, and content/buttons are shown via
-// `[value="x"] ~ .selector` general-sibling rules. Switching the hidden
+// `[value="x"] ~ .sheet-selector` general-sibling rules. Switching the hidden
 // input's value is done by a tiny sheet worker (on("clicked:x") ->
 // setAttrs({sheetTab: "x"})), not by anything in this stylesheet.
 
 @use "variables" as v;
 
-.tab-bar {
+.sheet-tab-bar {
   display: flex;
   gap: 0.15rem;
   margin-bottom: 1rem;
 }
 
-.tab-button {
+.sheet-tab-button {
   appearance: none;
   border: 1px solid v.$color-rule;
   border-bottom: none;
@@ -33,16 +33,16 @@
   }
 }
 
-.tab-content {
+.sheet-tab-content {
   display: none;
 }
 
 // Active tab: highlight the button and reveal its content. Both are
-// siblings that follow the hidden .tabstoggle input, so a single
+// siblings that follow the hidden .sheet-tabstoggle input, so a single
 // general-sibling selector per tab drives both.
-.tabstoggle[value="character"] ~ .tab-bar .tab-button-character,
-.tabstoggle[value="equipment"] ~ .tab-bar .tab-button-equipment,
-.tabstoggle[value="vehicle"] ~ .tab-bar .tab-button-vehicle {
+.sheet-tabstoggle[value="character"] ~ .sheet-tab-bar .sheet-tab-button-character,
+.sheet-tabstoggle[value="equipment"] ~ .sheet-tab-bar .sheet-tab-button-equipment,
+.sheet-tabstoggle[value="vehicle"] ~ .sheet-tab-bar .sheet-tab-button-vehicle {
   background: v.$color-paper;
   color: v.$color-accent-dark;
   border-color: v.$color-ink;
@@ -50,8 +50,8 @@
   margin-bottom: -1px;
 }
 
-.tabstoggle[value="character"] ~ .tab-content.tab-character,
-.tabstoggle[value="equipment"] ~ .tab-content.tab-equipment,
-.tabstoggle[value="vehicle"] ~ .tab-content.tab-vehicle {
+.sheet-tabstoggle[value="character"] ~ .sheet-tab-content.sheet-tab-character,
+.sheet-tabstoggle[value="equipment"] ~ .sheet-tab-content.sheet-tab-equipment,
+.sheet-tabstoggle[value="vehicle"] ~ .sheet-tab-content.sheet-tab-vehicle {
   display: block;
 }

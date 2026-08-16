@@ -4,7 +4,7 @@
 @use "variables" as v;
 @use "mixins";
 
-.t200-sheet {
+.sheet-t200-sheet {
   font-family: v.$font-body;
   color: v.$color-ink;
   background: v.$color-paper;
@@ -47,7 +47,7 @@
 }
 
 // Generic label:input key-value pair, e.g. header fields, vehicle info
-.field {
+.sheet-field {
   display: flex;
   align-items: baseline;
   gap: 0.4rem;
@@ -62,8 +62,8 @@
   }
 }
 
-// Generic grid row of .field elements
-.header-row {
+// Generic grid row of .sheet-field elements
+.sheet-header-row {
   display: grid;
   gap: 0.4rem v.$gap;
 }
@@ -77,12 +77,12 @@
 }
 
 // Generic vertical list of label+input rows (Coolness, RF, Fuel Capacity, etc.)
-.stat-list {
+.sheet-stat-list {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 
-  .stat-row {
+  .sheet-stat-row {
     display: grid;
     grid-template-columns: 1fr 4.5rem;
     align-items: center;

@@ -1,50 +1,50 @@
-<div class="t200-sheet">
+<div class="sheet-t200-sheet">
 
-  <input type="hidden" class="tabstoggle" name="attr_sheetTab" value="character">
+  <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="character">
 
-  <div class="tab-bar">
-    <button type="action" name="act_character" class="tab-button tab-button-character">Character Sheet</button>
-    <button type="action" name="act_equipment" class="tab-button tab-button-equipment">Equipment</button>
-    <button type="action" name="act_vehicle" class="tab-button tab-button-vehicle">Vehicle</button>
+  <div class="sheet-tab-bar">
+    <button type="action" name="act_character" class="sheet-tab-button sheet-tab-button-character">Character Sheet</button>
+    <button type="action" name="act_equipment" class="sheet-tab-button sheet-tab-button-equipment">Equipment</button>
+    <button type="action" name="act_vehicle" class="sheet-tab-button sheet-tab-button-vehicle">Vehicle</button>
   </div>
 
-  <div class="tab-content tab-character">
+  <div class="sheet-tab-content sheet-tab-character">
 
   <div class="sheet-header">
     <h1 class="sheet-title">Character Record Sheet</h1>
 
-    <div class="header-row row-1">
-      <div class="field field-name">
+    <div class="sheet-header-row sheet-row-1">
+      <div class="sheet-field sheet-field-name">
         <label for="character_name">Character's Name</label>
         <input type="text" name="attr_character_name" id="character_name">
       </div>
-      <div class="field field-age">
+      <div class="sheet-field sheet-field-age">
         <label for="age">Age</label>
         <input type="number" name="attr_age" id="age">
       </div>
     </div>
 
-    <div class="header-row row-2">
-      <div class="field field-rank">
+    <div class="sheet-header-row sheet-row-2">
+      <div class="sheet-field sheet-field-rank">
         <label for="rank">Rank</label>
         <input type="text" name="attr_rank" id="rank">
       </div>
-      <div class="field field-branch">
+      <div class="sheet-field sheet-field-branch">
         <label for="branch">Branch</label>
         <input type="text" name="attr_branch" id="branch">
       </div>
-      <div class="field field-specialty">
+      <div class="sheet-field sheet-field-specialty">
         <label for="specialty">Specialty</label>
         <input type="text" name="attr_specialty" id="specialty">
       </div>
     </div>
 
-    <div class="header-row row-3">
-      <div class="field field-nationality">
+    <div class="sheet-header-row sheet-row-3">
+      <div class="sheet-field sheet-field-nationality">
         <label for="nationality">Nationality</label>
         <input type="text" name="attr_nationality" id="nationality">
       </div>
-      <div class="field field-weight">
+      <div class="sheet-field sheet-field-weight">
         <label for="weight">Weight</label>
         <input type="text" name="attr_weight" id="weight">
       </div>
@@ -54,85 +54,85 @@
   <div class="sheet-body">
 
     <!-- ================= COLUMN 1: Attributes, Skills, To-Hit ================= -->
-    <section class="sheet-col col-attributes">
+    <section class="sheet-col sheet-col-attributes">
 
-      <div class="attributes-panel mb-1">
+      <div class="sheet-attributes-panel sheet-mb-1">
         <h2>Basic Attributes</h2>
-        <table class="attributes-table">
+        <table class="sheet-attributes-table">
           <tbody>
             <tr>
-              <td class="attr-abbr">STR</td>
-              <td class="attr-name">Strength</td>
-              <td class="attr-value"><input type="number" name="attr_str"></td>
+              <td class="sheet-attr-abbr">STR</td>
+              <td class="sheet-attr-name">Strength</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_str"></td>
             </tr>
             <tr>
-              <td class="attr-abbr">AGL</td>
-              <td class="attr-name">Agility</td>
-              <td class="attr-value"><input type="number" name="attr_agl"></td>
+              <td class="sheet-attr-abbr">AGL</td>
+              <td class="sheet-attr-name">Agility</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_agl"></td>
             </tr>
             <tr>
-              <td class="attr-abbr">CON</td>
-              <td class="attr-name">Constitution</td>
-              <td class="attr-value"><input type="number" name="attr_con"></td>
+              <td class="sheet-attr-abbr">CON</td>
+              <td class="sheet-attr-name">Constitution</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_con"></td>
             </tr>
             <tr>
-              <td class="attr-abbr">STA</td>
-              <td class="attr-name">Stature</td>
-              <td class="attr-value"><input type="number" name="attr_sta"></td>
+              <td class="sheet-attr-abbr">STA</td>
+              <td class="sheet-attr-name">Stature</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_sta"></td>
             </tr>
             <tr>
-              <td class="attr-abbr">INT</td>
-              <td class="attr-name">Intelligence</td>
-              <td class="attr-value"><input type="number" name="attr_int"></td>
+              <td class="sheet-attr-abbr">INT</td>
+              <td class="sheet-attr-name">Intelligence</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_int"></td>
             </tr>
             <tr>
-              <td class="attr-abbr">EDU</td>
-              <td class="attr-name">Education</td>
-              <td class="attr-value"><input type="number" name="attr_edu"></td>
+              <td class="sheet-attr-abbr">EDU</td>
+              <td class="sheet-attr-name">Education</td>
+              <td class="sheet-attr-value"><input type="number" name="attr_edu"></td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div class="stat-list mb-2">
-        <div class="stat-row">
+      <div class="sheet-stat-list sheet-mb-2">
+        <div class="sheet-stat-row">
           <label for="coolness">Coolness Under Fire</label>
           <input type="number" name="attr_coolness" id="coolness">
         </div>
-        <div class="stat-row">
+        <div class="sheet-stat-row">
           <label for="rads">RADs</label>
           <input type="number" name="attr_rads" id="rads">
         </div>
-        <div class="stat-row">
+        <div class="sheet-stat-row">
           <label for="load">Load</label>
           <input type="text" name="attr_load" id="load">
         </div>
-        <div class="stat-row">
+        <div class="sheet-stat-row">
           <label for="throw_range">Throw Range</label>
           <input type="text" name="attr_throw_range" id="throw_range">
         </div>
       </div>
 
-      <div class="skills-panel">
+      <div class="sheet-skills-panel">
         <h2>Skills</h2>
-        <table class="skills-table">
+        <table class="sheet-skills-table">
           <thead>
             <tr>
-              <th class="skill-level">Level</th>
-              <th class="skill-name">Skill</th>
+              <th class="sheet-skill-level">Level</th>
+              <th class="sheet-skill-name">Skill</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td class="skill-level"><input type="number" name="attr_skill1_level"></td><td><input type="text" name="attr_skill1_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill2_level"></td><td><input type="text" name="attr_skill2_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill3_level"></td><td><input type="text" name="attr_skill3_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill4_level"></td><td><input type="text" name="attr_skill4_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill5_level"></td><td><input type="text" name="attr_skill5_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill6_level"></td><td><input type="text" name="attr_skill6_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill7_level"></td><td><input type="text" name="attr_skill7_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill8_level"></td><td><input type="text" name="attr_skill8_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill9_level"></td><td><input type="text" name="attr_skill9_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill10_level"></td><td><input type="text" name="attr_skill10_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill1_level"></td><td><input type="text" name="attr_skill1_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill2_level"></td><td><input type="text" name="attr_skill2_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill3_level"></td><td><input type="text" name="attr_skill3_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill4_level"></td><td><input type="text" name="attr_skill4_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill5_level"></td><td><input type="text" name="attr_skill5_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill6_level"></td><td><input type="text" name="attr_skill6_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill7_level"></td><td><input type="text" name="attr_skill7_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill8_level"></td><td><input type="text" name="attr_skill8_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill9_level"></td><td><input type="text" name="attr_skill9_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill10_level"></td><td><input type="text" name="attr_skill10_name"></td></tr>
           </tbody>
         </table>
       </div>
@@ -140,72 +140,72 @@
     </section>
 
     <!-- ================= COLUMN 2: Hit Capacity ================= -->
-    <section class="sheet-col col-hitcap">
-      <div class="hitcap-panel">
+    <section class="sheet-col sheet-col-hitcap">
+      <div class="sheet-hitcap-panel">
         <h2>Hit Capacity</h2>
-        <div class="body-diagram mb-3">
-          <div class="hit-loc loc-head">
+        <div class="sheet-body-diagram sheet-mb-3">
+          <div class="sheet-hit-loc sheet-loc-head">
             <label for="hp_head">Head</label>
             <input type="number" name="attr_hp_head" id="hp_head">
           </div>
-          <div class="hit-loc loc-larm">
+          <div class="sheet-hit-loc sheet-loc-larm">
             <label for="hp_larm">L. Arm</label>
             <input type="number" name="attr_hp_larm" id="hp_larm">
           </div>
-          <div class="hit-loc loc-chest">
+          <div class="sheet-hit-loc sheet-loc-chest">
             <label for="hp_chest">Chest</label>
             <input type="number" name="attr_hp_chest" id="hp_chest">
           </div>
-          <div class="hit-loc loc-rarm">
+          <div class="sheet-hit-loc sheet-loc-rarm">
             <label for="hp_rarm">R. Arm</label>
             <input type="number" name="attr_hp_rarm" id="hp_rarm">
           </div>
-          <div class="hit-loc loc-abdomen">
+          <div class="sheet-hit-loc sheet-loc-abdomen">
             <label for="hp_abdomen">Abdomen</label>
             <input type="number" name="attr_hp_abdomen" id="hp_abdomen">
           </div>
-          <div class="hit-loc loc-lleg">
+          <div class="sheet-hit-loc sheet-loc-lleg">
             <label for="hp_lleg">L. Leg</label>
             <input type="number" name="attr_hp_lleg" id="hp_lleg">
           </div>
-          <div class="hit-loc loc-rleg">
+          <div class="sheet-hit-loc sheet-loc-rleg">
             <label for="hp_rleg">R. Leg</label>
             <input type="number" name="attr_hp_rleg" id="hp_rleg">
           </div>
         </div>
 
-        <div class="stat-list mb-3">
-          <div class="stat-row">
+        <div class="sheet-stat-list sheet-mb-3">
+          <div class="sheet-stat-row">
             <label for="money">Money</label>
             <input type="text" name="attr_money" id="money">
           </div>
-          <div class="stat-row">
+          <div class="sheet-stat-row">
             <label for="karma">Karma Points</label>
             <input type="number" name="attr_karma" id="karma">
           </div>
         </div>
       </div>
 
-      <div class="skills-panel">
+      <div class="sheet-skills-panel">
         <h2>Skills</h2>
-        <table class="skills-table">
+        <table class="sheet-skills-table">
           <thead>
             <tr>
-              <th class="skill-level">Level</th>
-              <th class="skill-name">Skill</th>
+              <th class="sheet-skill-level">Level</th>
+              <th class="sheet-skill-name">Skill</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td class="skill-level"><input type="number" name="attr_skill11_level"></td><td><input type="text" name="attr_skill11_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill12_level"></td><td><input type="text" name="attr_skill12_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill13_level"></td><td><input type="text" name="attr_skill13_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill14_level"></td><td><input type="text" name="attr_skill14_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill15_level"></td><td><input type="text" name="attr_skill15_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill16_level"></td><td><input type="text" name="attr_skill16_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill17_level"></td><td><input type="text" name="attr_skill17_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill18_level"></td><td><input type="text" name="attr_skill18_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill19_level"></td><td><input type="text" name="attr_skill19_name"></td></tr>
-            <tr><td class="skill-level"><input type="number" name="attr_skill20_level"></td><td><input type="text" name="attr_skill20_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill11_level"></td><td><input type="text" name="attr_skill11_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill12_level"></td><td><input type="text" name="attr_skill12_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill13_level"></td><td><input type="text" name="attr_skill13_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill14_level"></td><td><input type="text" name="attr_skill14_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill15_level"></td><td><input type="text" name="attr_skill15_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill16_level"></td><td><input type="text" name="attr_skill16_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill17_level"></td><td><input type="text" name="attr_skill17_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill18_level"></td><td><input type="text" name="attr_skill18_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill19_level"></td><td><input type="text" name="attr_skill19_name"></td></tr>
+            <tr><td class="sheet-skill-level"><input type="number" name="attr_skill20_level"></td><td><input type="text" name="attr_skill20_name"></td></tr>
           </tbody>
         </table>
       </div>
@@ -213,10 +213,10 @@
     </section>
 
     <!-- ================= COLUMN 3: Equipment ================= -->
-    <section class="sheet-col col-equipment">
-      <div class="equipment-panel mb-2">
+    <section class="sheet-col sheet-col-equipment">
+      <div class="sheet-equipment-panel sheet-mb-2">
         <h2>Equipment</h2>
-        <ul class="equipment-list">
+        <ul class="sheet-equipment-list">
           <li><input type="text" name="attr_equipment1"></li>
           <li><input type="text" name="attr_equipment2"></li>
           <li><input type="text" name="attr_equipment3"></li>
@@ -240,12 +240,12 @@
         </ul>
       </div>
 
-      <div class="tohit-panel">
+      <div class="sheet-tohit-panel">
         <h2>Base Numbers to Hit</h2>
-        <table class="tohit-table">
+        <table class="sheet-tohit-table">
           <thead>
             <tr>
-              <th class="tohit-skill">Skill</th>
+              <th class="sheet-tohit-skill">Skill</th>
               <th>S</th>
               <th>M</th>
               <th>L</th>
@@ -253,31 +253,31 @@
           </thead>
           <tbody>
             <tr>
-              <td class="tohit-skill">CRM</td>
+              <td class="sheet-tohit-skill">CRM</td>
               <td><input type="number" name="attr_tohit_crm_s"></td>
               <td><input type="number" name="attr_tohit_crm_m"></td>
               <td><input type="number" name="attr_tohit_crm_l"></td>
             </tr>
             <tr>
-              <td class="tohit-skill">PST</td>
+              <td class="sheet-tohit-skill">PST</td>
               <td><input type="number" name="attr_tohit_pst_s"></td>
               <td><input type="number" name="attr_tohit_pst_m"></td>
               <td><input type="number" name="attr_tohit_pst_l"></td>
             </tr>
             <tr>
-              <td class="tohit-skill">HW</td>
+              <td class="sheet-tohit-skill">HW</td>
               <td><input type="number" name="attr_tohit_hw_s"></td>
               <td><input type="number" name="attr_tohit_hw_m"></td>
               <td><input type="number" name="attr_tohit_hw_l"></td>
             </tr>
             <tr>
-              <td class="tohit-skill">LCG</td>
+              <td class="sheet-tohit-skill">LCG</td>
               <td><input type="number" name="attr_tohit_lcg_s"></td>
               <td><input type="number" name="attr_tohit_lcg_m"></td>
               <td><input type="number" name="attr_tohit_lcg_l"></td>
             </tr>
             <tr>
-              <td class="tohit-skill">HB</td>
+              <td class="sheet-tohit-skill">HB</td>
               <td><input type="number" name="attr_tohit_hb_s"></td>
               <td><input type="number" name="attr_tohit_hb_m"></td>
               <td><input type="number" name="attr_tohit_hb_l"></td>
@@ -285,16 +285,16 @@
           </tbody>
         </table>
 
-        <div class="combat-derived">
-          <div class="stat-row">
+        <div class="sheet-combat-derived">
+          <div class="sheet-stat-row">
             <label for="body_combat_damage">Body Combat Damage</label>
             <input type="text" name="attr_body_combat_damage" id="body_combat_damage">
           </div>
-          <div class="stat-row">
+          <div class="sheet-stat-row">
             <label for="mil_exp_base">Military Experience Base</label>
             <input type="text" name="attr_mil_exp_base" id="mil_exp_base">
           </div>
-          <div class="stat-row">
+          <div class="sheet-stat-row">
             <label for="months_in_combat">Months In Combat</label>
             <input type="number" name="attr_months_in_combat" id="months_in_combat">
           </div>
@@ -308,19 +308,19 @@
 
   </div>
 
-  <div class="tab-content tab-equipment">
+  <div class="sheet-tab-content sheet-tab-equipment">
 
   <div class="sheet-header">
     <h1 class="sheet-title">Equipment Sheet</h1>
   </div>
 
-  <div class="gear-columns">
+  <div class="sheet-gear-columns">
 
-    <section class="sheet-panel gear-col">
+    <section class="sheet-panel sheet-gear-col">
       <h2>Equipment</h2>
-      <table class="gear-table">
+      <table class="sheet-gear-table">
         <thead>
-          <tr><th class="gear-name">Equipment</th><th class="gear-wt">Wt.</th></tr>
+          <tr><th class="sheet-gear-name">Equipment</th><th class="sheet-gear-wt">Wt.</th></tr>
         </thead>
         <tbody>
           <tr><td><input type="text" name="attr_eq_col1_1_name"></td><td><input type="text" name="attr_eq_col1_1_wt"></td></tr>
@@ -342,11 +342,11 @@
       </table>
     </section>
 
-    <section class="sheet-panel gear-col">
+    <section class="sheet-panel sheet-gear-col">
       <h2>Equipment</h2>
-      <table class="gear-table">
+      <table class="sheet-gear-table">
         <thead>
-          <tr><th class="gear-name">Equipment</th><th class="gear-wt">Wt.</th></tr>
+          <tr><th class="sheet-gear-name">Equipment</th><th class="sheet-gear-wt">Wt.</th></tr>
         </thead>
         <tbody>
           <tr><td><input type="text" name="attr_eq_col2_1_name"></td><td><input type="text" name="attr_eq_col2_1_wt"></td></tr>
@@ -368,11 +368,11 @@
       </table>
     </section>
 
-    <section class="sheet-panel gear-col">
+    <section class="sheet-panel sheet-gear-col">
       <h2>Equipment Carried</h2>
-      <table class="gear-table">
+      <table class="sheet-gear-table">
         <thead>
-          <tr><th class="gear-name">Equipment Carried</th><th class="gear-wt">Wt.</th></tr>
+          <tr><th class="sheet-gear-name">Equipment Carried</th><th class="sheet-gear-wt">Wt.</th></tr>
         </thead>
         <tbody>
           <tr><td><input type="text" name="attr_eq_carried_1_name"></td><td><input type="text" name="attr_eq_carried_1_wt"></td></tr>
@@ -396,9 +396,9 @@
 
   </div>
 
-  <section class="sheet-panel weapon-panel">
+  <section class="sheet-panel sheet-weapon-panel">
     <h2>Weapon Statistics</h2>
-    <table class="weapon-table">
+    <table class="sheet-weapon-table">
       <thead>
         <tr>
           <th title="Weapon Name">Weapon</th>
@@ -499,30 +499,30 @@
 
   </div>
 
-  <div class="tab-content tab-vehicle">
+  <div class="sheet-tab-content sheet-tab-vehicle">
 
   <div class="sheet-header">
     <h1 class="sheet-title">Vehicle Record Sheet</h1>
   </div>
 
-  <div class="veh-body">
+  <div class="sheet-veh-body">
 
     <!-- ================= COLUMN A: Info, Armament, Damage Location ================= -->
-    <section class="sheet-col veh-col-main">
+    <section class="sheet-col sheet-veh-col-main">
 
       <div class="sheet-panel">
-        <table class="veh-info-table">
+        <table class="sheet-veh-info-table">
           <tbody>
-            <tr><td class="veh-info-label">Vehicle Type</td><td><input type="text" name="attr_veh_type"></td></tr>
-            <tr><td class="veh-info-label">Weight</td><td><input type="text" name="attr_veh_weight"></td></tr>
-            <tr><td class="veh-info-label">Internal Load</td><td><input type="text" name="attr_veh_load_internal"></td></tr>
-            <tr><td class="veh-info-label">External Load</td><td><input type="text" name="attr_veh_load_external"></td></tr>
-            <tr><td class="veh-info-label">Passengers</td><td><input type="text" name="attr_veh_passengers"></td></tr>
+            <tr><td class="sheet-veh-info-label">Vehicle Type</td><td><input type="text" name="attr_veh_type"></td></tr>
+            <tr><td class="sheet-veh-info-label">Weight</td><td><input type="text" name="attr_veh_weight"></td></tr>
+            <tr><td class="sheet-veh-info-label">Internal Load</td><td><input type="text" name="attr_veh_load_internal"></td></tr>
+            <tr><td class="sheet-veh-info-label">External Load</td><td><input type="text" name="attr_veh_load_external"></td></tr>
+            <tr><td class="sheet-veh-info-label">Passengers</td><td><input type="text" name="attr_veh_passengers"></td></tr>
           </tbody>
         </table>
 
-        <div class="veh-crew-row">
-          <span class="veh-crew-label">Crew</span>
+        <div class="sheet-veh-crew-row">
+          <span class="sheet-veh-crew-label">Crew</span>
           <label>D <input type="checkbox" name="attr_veh_crew_d" value="1"></label>
           <label>C <input type="checkbox" name="attr_veh_crew_c" value="1"></label>
           <label>G <input type="checkbox" name="attr_veh_crew_g" value="1"></label>
@@ -534,60 +534,60 @@
 
       <div class="sheet-panel">
         <h2>Armament</h2>
-        <table class="veh-armament-table">
+        <table class="sheet-veh-armament-table">
           <tbody>
             <tr>
-              <td class="veh-arm-label">Main</td>
+              <td class="sheet-veh-arm-label">Main</td>
               <td><input type="text" name="attr_veh_arm_main_name"></td>
-              <td class="veh-rof-label">ROF</td>
+              <td class="sheet-veh-rof-label">ROF</td>
               <td><input type="number" name="attr_veh_arm_main_rof"></td>
             </tr>
             <tr>
-              <td class="veh-arm-label">Gunner's MG</td>
+              <td class="sheet-veh-arm-label">Gunner's MG</td>
               <td><input type="text" name="attr_veh_arm_gunner_name"></td>
-              <td class="veh-rof-label">ROF</td>
+              <td class="sheet-veh-rof-label">ROF</td>
               <td><input type="number" name="attr_veh_arm_gunner_rof"></td>
             </tr>
             <tr>
-              <td class="veh-arm-label">Missile Lnchr</td>
+              <td class="sheet-veh-arm-label">Missile Lnchr</td>
               <td><input type="text" name="attr_veh_arm_missile_name"></td>
-              <td class="veh-rof-label">ROF</td>
+              <td class="sheet-veh-rof-label">ROF</td>
               <td><input type="number" name="attr_veh_arm_missile_rof"></td>
             </tr>
             <tr>
-              <td class="veh-arm-label">Commander's MG</td>
+              <td class="sheet-veh-arm-label">Commander's MG</td>
               <td><input type="text" name="attr_veh_arm_cmd_name"></td>
-              <td class="veh-rof-label">ROF</td>
+              <td class="sheet-veh-rof-label">ROF</td>
               <td><input type="number" name="attr_veh_arm_cmd_rof"></td>
             </tr>
             <tr>
-              <td class="veh-arm-label">Other</td>
+              <td class="sheet-veh-arm-label">Other</td>
               <td><input type="text" name="attr_veh_arm_other1_name"></td>
-              <td class="veh-rof-label">ROF</td>
+              <td class="sheet-veh-rof-label">ROF</td>
               <td><input type="number" name="attr_veh_arm_other1_rof"></td>
             </tr>
             <tr>
-              <td class="veh-arm-label">Other</td>
+              <td class="sheet-veh-arm-label">Other</td>
               <td><input type="text" name="attr_veh_arm_other2_name"></td>
-              <td class="veh-rof-label">ROF</td>
+              <td class="sheet-veh-rof-label">ROF</td>
               <td><input type="number" name="attr_veh_arm_other2_rof"></td>
             </tr>
           </tbody>
         </table>
 
-        <div class="stat-list mt-2">
-          <div class="stat-row">
+        <div class="sheet-stat-list sheet-mt-2">
+          <div class="sheet-stat-row">
             <label for="veh_rf">RF: +</label>
             <input type="number" name="attr_veh_rf" id="veh_rf">
           </div>
         </div>
 
-        <div class="field mt-1">
+        <div class="sheet-field sheet-mt-1">
           <label for="veh_ammo">Ammo</label>
           <input type="text" name="attr_veh_ammo" id="veh_ammo">
         </div>
 
-        <div class="veh-combat-speed mt-1">
+        <div class="sheet-veh-combat-speed sheet-mt-1">
           <label>Combat Speed</label>
           <input type="text" name="attr_veh_combat_speed_road">
           <span>/</span>
@@ -597,98 +597,98 @@
 
       <div class="sheet-panel">
         <h2>Vehicle Damage Location</h2>
-        <table class="veh-damage-table">
+        <table class="sheet-veh-damage-table">
           <thead>
             <tr>
-              <th class="veh-dmg-loc-col">Location</th>
+              <th class="sheet-veh-dmg-loc-col">Location</th>
               <th colspan="3">Armor</th>
-              <th class="veh-dmg-order-col">Hit Order</th>
+              <th class="sheet-veh-dmg-order-col">Hit Order</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="veh-dmg-row-label" title="Right Body">R:</td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Lower Hull">LH</span><input type="text" name="attr_veh_dmg_rbody_lh"></td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Glacis">G</span><input type="text" name="attr_veh_dmg_rbody_g"></td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Hull Back">HB</span><input type="text" name="attr_veh_dmg_rbody_hb"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_rbody_order" placeholder="e.g. E,F,A,P"></td>
+              <td class="sheet-veh-dmg-row-label" title="Right Body">R:</td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Lower Hull">LH</span><input type="text" name="attr_veh_dmg_rbody_lh"></td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Glacis">G</span><input type="text" name="attr_veh_dmg_rbody_g"></td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Hull Back">HB</span><input type="text" name="attr_veh_dmg_rbody_hb"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_rbody_order" placeholder="e.g. E,F,A,P"></td>
             </tr>
             <tr>
-              <td class="veh-dmg-row-label" title="Left Body">L:</td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Lower Hull">LH</span><input type="text" name="attr_veh_dmg_lbody_lh"></td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Glacis">G</span><input type="text" name="attr_veh_dmg_lbody_g"></td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Hull Back">HB</span><input type="text" name="attr_veh_dmg_lbody_hb"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_lbody_order" placeholder="e.g. D,R,S,P"></td>
+              <td class="sheet-veh-dmg-row-label" title="Left Body">L:</td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Lower Hull">LH</span><input type="text" name="attr_veh_dmg_lbody_lh"></td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Glacis">G</span><input type="text" name="attr_veh_dmg_lbody_g"></td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Hull Back">HB</span><input type="text" name="attr_veh_dmg_lbody_hb"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_lbody_order" placeholder="e.g. D,R,S,P"></td>
             </tr>
             <tr>
-              <td class="veh-dmg-row-label" title="Right Guns">R:</td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Turret Front">TF</span><input type="text" name="attr_veh_dmg_rguns_tf"></td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Turret Back">TB</span><input type="text" name="attr_veh_dmg_rguns_tb"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_rguns_order" placeholder="e.g. X,C"></td>
+              <td class="sheet-veh-dmg-row-label" title="Right Guns">R:</td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Turret Front">TF</span><input type="text" name="attr_veh_dmg_rguns_tf"></td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Turret Back">TB</span><input type="text" name="attr_veh_dmg_rguns_tb"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_rguns_order" placeholder="e.g. X,C"></td>
             </tr>
             <tr>
-              <td class="veh-dmg-row-label" title="Center Guns">C:</td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Turret Front">TF</span><input type="text" name="attr_veh_dmg_cguns_tf"></td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Turret Back">TB</span><input type="text" name="attr_veh_dmg_cguns_tb"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_cguns_order" placeholder="e.g. M,G,W,N"></td>
+              <td class="sheet-veh-dmg-row-label" title="Center Guns">C:</td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Turret Front">TF</span><input type="text" name="attr_veh_dmg_cguns_tf"></td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Turret Back">TB</span><input type="text" name="attr_veh_dmg_cguns_tb"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_cguns_order" placeholder="e.g. M,G,W,N"></td>
             </tr>
             <tr>
-              <td class="veh-dmg-row-label" title="Left Guns">L:</td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Turret Front">TF</span><input type="text" name="attr_veh_dmg_lguns_tf"></td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Turret Back">TB</span><input type="text" name="attr_veh_dmg_lguns_tb"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_lguns_order"></td>
+              <td class="sheet-veh-dmg-row-label" title="Left Guns">L:</td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Turret Front">TF</span><input type="text" name="attr_veh_dmg_lguns_tf"></td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Turret Back">TB</span><input type="text" name="attr_veh_dmg_lguns_tb"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_lguns_order"></td>
             </tr>
             <tr>
-              <td class="veh-dmg-row-label" title="Turret Side">TS:</td>
-              <td class="veh-dmg-cell"><input type="text" name="attr_veh_dmg_tside_ts"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_tside_order" placeholder="e.g. M,W,G,C"></td>
+              <td class="sheet-veh-dmg-row-label" title="Turret Side">TS:</td>
+              <td class="sheet-veh-dmg-cell"><input type="text" name="attr_veh_dmg_tside_ts"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_tside_order" placeholder="e.g. M,W,G,C"></td>
             </tr>
             <tr>
-              <td class="veh-dmg-row-label" title="Front Body">F:</td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Hull Side">HS</span><input type="text" name="attr_veh_dmg_fbody_hs"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_fbody_order" placeholder="e.g. D,E,F"></td>
+              <td class="sheet-veh-dmg-row-label" title="Front Body">F:</td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Hull Side">HS</span><input type="text" name="attr_veh_dmg_fbody_hs"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_fbody_order" placeholder="e.g. D,E,F"></td>
             </tr>
             <tr>
-              <td class="veh-dmg-row-label" title="Center Body">C:</td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Hull Side">HS</span><input type="text" name="attr_veh_dmg_cbody_hs"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_cbody_order" placeholder="e.g. S,C,G,A"></td>
+              <td class="sheet-veh-dmg-row-label" title="Center Body">C:</td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Hull Side">HS</span><input type="text" name="attr_veh_dmg_cbody_hs"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_cbody_order" placeholder="e.g. S,C,G,A"></td>
             </tr>
             <tr>
-              <td class="veh-dmg-row-label" title="Rear Body">R:</td>
-              <td class="veh-dmg-cell"><span class="veh-dmg-code" title="Hull Side">HS</span><input type="text" name="attr_veh_dmg_rearbody_hs"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_rearbody_order" placeholder="e.g. S,P"></td>
+              <td class="sheet-veh-dmg-row-label" title="Rear Body">R:</td>
+              <td class="sheet-veh-dmg-cell"><span class="sheet-veh-dmg-code" title="Hull Side">HS</span><input type="text" name="attr_veh_dmg_rearbody_hs"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_rearbody_order" placeholder="e.g. S,P"></td>
             </tr>
             <tr>
-              <td class="veh-dmg-row-label" title="Front Deck">FD</td>
-              <td class="veh-dmg-cell"><input type="text" name="attr_veh_dmg_fdeck_fd"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_fdeck_order" placeholder="e.g. D,E,F"></td>
+              <td class="sheet-veh-dmg-row-label" title="Front Deck">FD</td>
+              <td class="sheet-veh-dmg-cell"><input type="text" name="attr_veh_dmg_fdeck_fd"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_fdeck_order" placeholder="e.g. D,E,F"></td>
             </tr>
             <tr>
-              <td class="veh-dmg-row-label" title="Turret Deck">TD</td>
-              <td class="veh-dmg-cell"><input type="text" name="attr_veh_dmg_tdeck_td"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_tdeck_order" placeholder="e.g. C,G,X,M,W,N"></td>
+              <td class="sheet-veh-dmg-row-label" title="Turret Deck">TD</td>
+              <td class="sheet-veh-dmg-cell"><input type="text" name="attr_veh_dmg_tdeck_td"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_tdeck_order" placeholder="e.g. C,G,X,M,W,N"></td>
             </tr>
             <tr>
-              <td class="veh-dmg-row-label" title="Back Deck / Rear Deck">BD</td>
-              <td class="veh-dmg-cell"><input type="text" name="attr_veh_dmg_rdeck_bd"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-cell"></td>
-              <td class="veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_rdeck_order" placeholder="e.g. P,S"></td>
+              <td class="sheet-veh-dmg-row-label" title="Back Deck / Rear Deck">BD</td>
+              <td class="sheet-veh-dmg-cell"><input type="text" name="attr_veh_dmg_rdeck_bd"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-cell"></td>
+              <td class="sheet-veh-dmg-order-cell"><input type="text" name="attr_veh_dmg_rdeck_order" placeholder="e.g. P,S"></td>
             </tr>
           </tbody>
         </table>
@@ -697,20 +697,20 @@
     </section>
 
     <!-- ================= COLUMN B: Maintenance, Travel, Component Damage, Cargo ================= -->
-    <section class="sheet-col veh-col-side">
+    <section class="sheet-col sheet-veh-col-side">
 
       <div class="sheet-panel">
         <h2>Maintenance</h2>
-        <div class="stat-list">
-          <div class="stat-row">
+        <div class="sheet-stat-list">
+          <div class="sheet-stat-row">
             <label for="veh_maint_number">Maintenance #</label>
             <input type="text" name="attr_veh_maint_number" id="veh_maint_number">
           </div>
-          <div class="stat-row">
+          <div class="sheet-stat-row">
             <label for="veh_maint_wear">Wear Value</label>
             <input type="text" name="attr_veh_maint_wear" id="veh_maint_wear">
           </div>
-          <div class="stat-row">
+          <div class="sheet-stat-row">
             <label for="veh_maint_breakdowns">Breakdowns</label>
             <input type="text" name="attr_veh_maint_breakdowns" id="veh_maint_breakdowns">
           </div>
@@ -719,29 +719,29 @@
 
       <div class="sheet-panel">
         <h2>Travel</h2>
-        <div class="stat-list veh-travel-stats">
-          <div class="stat-row">
+        <div class="sheet-stat-list sheet-veh-travel-stats">
+          <div class="sheet-stat-row">
             <label for="veh_fuel_capacity">Fuel Capacity</label>
             <input type="text" name="attr_veh_fuel_capacity" id="veh_fuel_capacity">
           </div>
-          <div class="stat-row">
+          <div class="sheet-stat-row">
             <label for="veh_fuel_consumption">Fuel Consumption</label>
             <input type="text" name="attr_veh_fuel_consumption" id="veh_fuel_consumption">
           </div>
-          <div class="stat-row">
+          <div class="sheet-stat-row">
             <label for="veh_fuel_types">Fuel Types</label>
             <input type="text" name="attr_veh_fuel_types" id="veh_fuel_types">
           </div>
         </div>
 
-        <div class="veh-combat-speed mt-1">
+        <div class="sheet-veh-combat-speed sheet-mt-1">
           <label>Travel Speed</label>
           <input type="text" name="attr_veh_travel_speed_road">
           <span>/</span>
           <input type="text" name="attr_veh_travel_speed_offroad">
         </div>
 
-        <div class="field mt-1">
+        <div class="sheet-field sheet-mt-1">
           <label for="veh_amphibious">Amphibious?</label>
           <select name="attr_veh_amphibious" id="veh_amphibious">
             <option value=""></option>
@@ -753,7 +753,7 @@
 
       <div class="sheet-panel">
         <h2>Component Damage</h2>
-        <table class="veh-component-table">
+        <table class="sheet-veh-component-table">
           <thead>
             <tr><th>Component</th><th>Percent</th></tr>
           </thead>
@@ -770,7 +770,7 @@
 
       <div class="sheet-panel">
         <h2>Cargo</h2>
-        <textarea class="veh-cargo" name="attr_veh_cargo" rows="6"></textarea>
+        <textarea class="sheet-veh-cargo" name="attr_veh_cargo" rows="6"></textarea>
       </div>
 
     </section>

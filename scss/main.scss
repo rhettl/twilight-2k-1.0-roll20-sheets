@@ -14,16 +14,16 @@
 // Header
 // ---------------------------------------------------------------------------
 
-.header-row {
-  &.row-1 {
+.sheet-header-row {
+  &.sheet-row-1 {
     grid-template-columns: 2fr 1fr;
   }
 
-  &.row-2 {
+  &.sheet-row-2 {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  &.row-3 {
+  &.sheet-row-3 {
     grid-template-columns: 2fr 1fr;
   }
 }
@@ -43,7 +43,7 @@
 // Attributes
 // ---------------------------------------------------------------------------
 
-.attributes-table {
+.sheet-attributes-table {
   th,
   td {
     text-align: left;
@@ -51,17 +51,17 @@
     border-bottom: v.$border-rule;
   }
 
-  .attr-abbr {
+  .sheet-attr-abbr {
     font-family: v.$font-label;
     font-weight: 700;
     width: 2.5rem;
   }
 
-  .attr-name {
+  .sheet-attr-name {
     font-size: 0.85rem;
   }
 
-  .attr-value {
+  .sheet-attr-value {
     width: 3.5rem;
 
     input {
@@ -74,13 +74,13 @@
 // Skills
 // ---------------------------------------------------------------------------
 
-.skills-panel {
+.sheet-skills-panel {
   h2 {
     @include mixins.panel-heading;
   }
 }
 
-.skills-table {
+.sheet-skills-table {
   th,
   td {
     padding: 0.1rem 0.2rem;
@@ -96,7 +96,7 @@
     text-align: left;
   }
 
-  .skill-level {
+  .sheet-skill-level {
     width: 2.5rem;
 
     input {
@@ -109,13 +109,13 @@
 // Hit Capacity — body diagram
 // ---------------------------------------------------------------------------
 
-.hitcap-panel {
+.sheet-hitcap-panel {
   h2 {
     @include mixins.panel-heading;
   }
 }
 
-.body-diagram {
+.sheet-body-diagram {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
@@ -127,7 +127,7 @@
   justify-items: center;
 }
 
-.hit-loc {
+.sheet-hit-loc {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -150,31 +150,31 @@
     background: rgba(v.$color-danger, 0.03);
   }
 
-  &.loc-head {
+  &.sheet-loc-head {
     grid-area: head;
   }
-  &.loc-chest {
+  &.sheet-loc-chest {
     grid-area: chest;
     input {
       width: 4rem;
     }
   }
-  &.loc-larm {
+  &.sheet-loc-larm {
     grid-area: larm;
   }
-  &.loc-rarm {
+  &.sheet-loc-rarm {
     grid-area: rarm;
   }
-  &.loc-abdomen {
+  &.sheet-loc-abdomen {
     grid-area: abd;
     input {
       width: 4rem;
     }
   }
-  &.loc-lleg {
+  &.sheet-loc-lleg {
     grid-area: lleg;
   }
-  &.loc-rleg {
+  &.sheet-loc-rleg {
     grid-area: rleg;
   }
 }
@@ -183,13 +183,13 @@
 // Base Numbers to Hit
 // ---------------------------------------------------------------------------
 
-.tohit-panel {
+.sheet-tohit-panel {
   h2 {
     @include mixins.panel-heading;
   }
 }
 
-.tohit-table {
+.sheet-tohit-table {
   th,
   td {
     padding: 0.15rem 0.3rem;
@@ -204,7 +204,7 @@
     color: v.$color-rule;
   }
 
-  .tohit-skill {
+  .sheet-tohit-skill {
     text-align: left;
     font-family: v.$font-label;
     font-weight: 700;
@@ -217,8 +217,8 @@
   }
 }
 
-.combat-derived {
-  @extend .stat-list;
+.sheet-combat-derived {
+  @extend .sheet-stat-list;
   margin-top: 0.5rem;
 }
 
@@ -226,13 +226,13 @@
 // Equipment (short list on the character sheet itself)
 // ---------------------------------------------------------------------------
 
-.equipment-panel {
+.sheet-equipment-panel {
   h2 {
     @include mixins.panel-heading;
   }
 }
 
-.equipment-list {
+.sheet-equipment-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -258,9 +258,9 @@
     grid-template-columns: 1fr;
   }
 
-  .header-row.row-1,
-  .header-row.row-2,
-  .header-row.row-3 {
+  .sheet-header-row.sheet-row-1,
+  .sheet-header-row.sheet-row-2,
+  .sheet-header-row.sheet-row-3 {
     grid-template-columns: 1fr;
   }
 }
