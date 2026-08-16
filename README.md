@@ -14,13 +14,14 @@ Roll20 doesn't need this whole repo — just the two build outputs:
 
 1. In your game, go to **Settings → Game Settings → Character Sheet Template**
    and choose **Custom**.
-2. Paste the contents of **`sheet.html`** into the *HTML* box.
+2. Paste the contents of **`sheet.html`** into the *HTML* box. `sheet.html`
+   already ends with a `<script type="text/worker">...</script>` block —
+   leave it in; Roll20 has no separate box for sheet worker JS, it parses
+   that block out of the pasted HTML automatically. This is what makes the
+   tabs clickable — without it (or if it gets left out of the paste) the
+   tab buttons won't do anything.
 3. Paste the contents of **`sheet.css`** into the *CSS* box.
-4. Paste the contents of the `<script type="text/worker">...</script>` block
-   at the bottom of **`sheet-template.html`** (just the JS inside the tags)
-   into the *Sheet Worker JavaScript* box. This is what makes the tabs
-   clickable — without it the tab buttons won't do anything.
-5. Save. Every character sheet in the game will now use this template.
+4. Save. Every character sheet in the game will now use this template.
 
 If you only want to review what the sheet looks like without touching your
 Roll20 game, open `sheet-preview.html` in a browser instead (see
@@ -34,7 +35,7 @@ Roll20 game, open `sheet-preview.html` in a browser instead (see
 |---|---|
 | `sheet.html` | The combined sheet (all three tabs). Paste into Roll20's HTML box. |
 | `sheet.css` | The combined stylesheet. Paste into Roll20's CSS box. |
-| `sheet-template.html` | Not pasted directly, but its `<script type="text/worker">` block is — see step 4 above. |
+| `sheet-template.html` | Not pasted directly — it's the source that gets built into `sheet.html`, including the `<script type="text/worker">` block at the bottom. |
 
 **`sheet.html` and `sheet.css` are generated files** — see below. Don't hand-edit
 them; edit the source files and let the build regenerate them.

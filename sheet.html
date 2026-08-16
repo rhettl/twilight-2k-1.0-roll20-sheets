@@ -785,7 +785,7 @@
 <script type="text/worker">
   const t200Tabs = ["character", "equipment", "vehicle"];
   t200Tabs.forEach(function (tab) {
-    on("clicked:act_" + tab, function () {
+    on("clicked:" + tab, function () {
       setAttrs({ sheetTab: tab });
     });
   });
