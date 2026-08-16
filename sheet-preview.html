@@ -809,7 +809,7 @@
   sheet-template.html, which browsers ignore (unrecognized script type).
 -->
 <script>
-  document.querySelectorAll(".tab-button").forEach(function (btn) {
+  document.querySelectorAll(".sheet-tab-button").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       var tab = btn.name.replace(/^act_/, "");
