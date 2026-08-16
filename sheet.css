@@ -28,6 +28,10 @@
 }
 .sheet-t200-sheet input[type=number] {
   text-align: center;
+  width: 100% !important;
+}
+.sheet-t200-sheet label {
+  width: auto !important;
 }
 .sheet-t200-sheet table {
   width: 100%;

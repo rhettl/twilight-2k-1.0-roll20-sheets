@@ -23,6 +23,20 @@
 
   input[type="number"] {
     text-align: center;
+    // Roll20's own base charsheet.css ships
+    // `.ui-dialog .charsheet input[type=number] { width: 3.5em; }`, which
+    // out-specifies our rule above and loads after it, silently pinning
+    // every number input to ~56px. Neither side uses !important, so this
+    // wins outright regardless of load order.
+    width: 100% !important;
+  }
+
+  // Roll20's base charsheet.css also ships `.largedialog label { width:
+  // 100%; ... }`. Our field labels never set a width, so that rule wins
+  // uncontested and, as a flex item next to an input, eats roughly half the
+  // row before the input even starts. Reassert content-based sizing.
+  label {
+    width: auto !important;
   }
 
   table {
